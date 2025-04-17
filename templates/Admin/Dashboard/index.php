@@ -1,0 +1,8 @@
+<div class="card">
+    <div class="card-header">
+        <div class="card-title"><i class="fa-solid fa-tachometer-alt"></i>Dashboard</div>
+    </div>
+    <div class="card-body">
+        <?= $this->Html->link('<i class="fa-solid fa-plus-circle"></i> ' . __('Add page'), ['controller' => 'Pages', 'action' => 'add'], ['class' => 'btn btn-success', 'escape' => false]) ?>
+    </div>
+</div>
