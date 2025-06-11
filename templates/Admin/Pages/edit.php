@@ -1,3 +1,10 @@
+<?php
+/**
+ * @var \App\View\AppView $this
+ * @var array $config
+ * @var \Pages\Model\Entity\Page $page
+ */
+?>
 <?= $this->Html->script(['/backend/plugins/tinymce/tinymce.min', 'Pages.backend/main'], ['block' => true]) ?>
 <div class="card card-success card-outline">
     <div class="card-header">

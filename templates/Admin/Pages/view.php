@@ -1,3 +1,9 @@
+<?php
+/**
+ * @var \App\View\AppView $this
+ * @var \Pages\Model\Entity\Page $page
+ */
+?>
 <div class="card card-primary card-outline">
     <div class="card-header">
         <div class="card-title"><i class="fa-solid fa-eye me-2"></i><?= h($page->name) ?> (<?= h($page->alias) ?>)</div>

@@ -1,3 +1,9 @@
+<?php
+/**
+ * @var \App\View\AppView $this
+ * @var array<\Pages\Model\Entity\Page>|\Cake\Collection\CollectionInterface<\Pages\Model\Entity\Page> $pages
+ */
+?>
 <div class="card">
     <div class="card-body">
         <div class="table-responsive">

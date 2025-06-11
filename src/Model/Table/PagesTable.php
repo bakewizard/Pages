@@ -1,5 +1,4 @@
 <?php
-
 declare(strict_types=1);
 
 namespace Pages\Model\Table;
@@ -7,32 +6,36 @@ namespace Pages\Model\Table;
 use Cake\ORM\RulesChecker;
 use Cake\ORM\Table;
 use Cake\Validation\Validator;
+use Override;
 
 /**
- * Pages Model
+ * @property \Cake\ORM\Table&\Cake\ORM\Association\HasMany $PagesI18n
  *
- * @property |\Cake\ORM\Association\BelongsToMany $I18n
- *
- * @method \Pages\Model\Entity\Page get($primaryKey, $options = [])
- * @method \Pages\Model\Entity\Page newEntity($data = null, array $options = [])
- * @method \Pages\Model\Entity\Page[] newEntities(array $data, array $options = [])
- * @method \Pages\Model\Entity\Page|bool save(\Cake\Datasource\EntityInterface $entity, $options = [])
- * @method \Pages\Model\Entity\Page saveOrFail(\Cake\Datasource\EntityInterface $entity, $options = [])
+ * @method \Pages\Model\Entity\Page newEmptyEntity()
+ * @method \Pages\Model\Entity\Page newEntity(array $data, array $options = [])
+ * @method array<\Pages\Model\Entity\Page> newEntities(array $data, array $options = [])
+ * @method \Pages\Model\Entity\Page get(mixed $primaryKey, array|string $finder = 'all', \Psr\SimpleCache\CacheInterface|string|null $cache = null, \Closure|string|null $cacheKey = null, mixed ...$args)
+ * @method \Pages\Model\Entity\Page findOrCreate(\Cake\ORM\Query\SelectQuery|callable|array $search, ?callable $callback = null, array $options = [])
  * @method \Pages\Model\Entity\Page patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
- * @method \Pages\Model\Entity\Page[] patchEntities($entities, array $data, array $options = [])
- * @method \Pages\Model\Entity\Page findOrCreate($search, callable $callback = null, $options = [])
+ * @method array<\Pages\Model\Entity\Page> patchEntities(iterable $entities, array $data, array $options = [])
+ * @method \Pages\Model\Entity\Page|false save(\Cake\Datasource\EntityInterface $entity, array $options = [])
+ * @method \Pages\Model\Entity\Page saveOrFail(\Cake\Datasource\EntityInterface $entity, array $options = [])
+ * @method \Cake\Datasource\ResultSetInterface<\Pages\Model\Entity\Page>|false saveMany(iterable $entities, array $options = [])
+ * @method \Cake\Datasource\ResultSetInterface<\Pages\Model\Entity\Page> saveManyOrFail(iterable $entities, array $options = [])
+ * @method \Cake\Datasource\ResultSetInterface<\Pages\Model\Entity\Page>|false deleteMany(iterable $entities, array $options = [])
+ * @method \Cake\Datasource\ResultSetInterface<\Pages\Model\Entity\Page> deleteManyOrFail(iterable $entities, array $options = [])
  *
  * @mixin \Cake\ORM\Behavior\TimestampBehavior
+ * @mixin \Cake\ORM\Behavior\TranslateBehavior
+ *
+ * @extends \Cake\ORM\Table<array{Timestamp: \Cake\ORM\Behavior\TimestampBehavior, Translate: \Cake\ORM\Behavior\TranslateBehavior}>
  */
 class PagesTable extends Table
 {
-
     /**
-     * Initialize method
-     *
-     * @param array $config The configuration for the Table.
-     * @return void
+     * @inheritDoc
      */
+    #[Override]
     public function initialize(array $config): void
     {
         parent::initialize($config);
@@ -44,7 +47,7 @@ class PagesTable extends Table
         $this->addBehavior('Timestamp');
         $this->addBehavior('Translate', [
             'fields' => ['name', 'content', 'seo_title', 'seo_description', 'seo_keywords'],
-            'translationTable' => 'PagesI18n'
+            'translationTable' => 'PagesI18n',
         ]);
     }
 
@@ -110,5 +113,4 @@ class PagesTable extends Table
 
         return $rules;
     }
-
 }
