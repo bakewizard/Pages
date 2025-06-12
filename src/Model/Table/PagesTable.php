@@ -10,7 +10,6 @@ use Override;
 
 /**
  * @property \Cake\ORM\Table&\Cake\ORM\Association\HasMany $PagesI18n
- *
  * @method \Pages\Model\Entity\Page newEmptyEntity()
  * @method \Pages\Model\Entity\Page newEntity(array $data, array $options = [])
  * @method array<\Pages\Model\Entity\Page> newEntities(array $data, array $options = [])
@@ -24,10 +23,8 @@ use Override;
  * @method \Cake\Datasource\ResultSetInterface<\Pages\Model\Entity\Page> saveManyOrFail(iterable $entities, array $options = [])
  * @method \Cake\Datasource\ResultSetInterface<\Pages\Model\Entity\Page>|false deleteMany(iterable $entities, array $options = [])
  * @method \Cake\Datasource\ResultSetInterface<\Pages\Model\Entity\Page> deleteManyOrFail(iterable $entities, array $options = [])
- *
  * @mixin \Cake\ORM\Behavior\TimestampBehavior
  * @mixin \Cake\ORM\Behavior\TranslateBehavior
- *
  * @extends \Cake\ORM\Table<array{Timestamp: \Cake\ORM\Behavior\TimestampBehavior, Translate: \Cake\ORM\Behavior\TranslateBehavior}>
  */
 class PagesTable extends Table
