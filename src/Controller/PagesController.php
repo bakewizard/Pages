@@ -18,6 +18,7 @@ class PagesController extends AppController
      *
      * Displays a pages list
      *
+     * @menu
      * @return \Cake\Http\Response|void
      */
     public function index()
@@ -35,7 +36,7 @@ class PagesController extends AppController
      *
      * Displays a single page
      *
-     * @items Pages
+     * @menu Pages
      * @param string $alias The alias of the page to display
      * @return \Cake\Http\Response|void
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
