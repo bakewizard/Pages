@@ -3,7 +3,13 @@
     "description": "Pages plugin for BakeKit CMS",
     "license": "MIT",
     "type": "cakephp-plugin",
-    "keywords": ["cakephp", "plugin", "pages", "static-pages", "bakekit"],
+    "keywords": [
+        "cakephp",
+        "plugin",
+        "pages",
+        "static-pages",
+        "bakekit"
+    ],
     "require": {
         "php": ">=8.3",
         "cakephp/cakephp": "5.2.*"
@@ -19,6 +25,7 @@
     "autoload-dev": {
         "psr-4": {
             "Pages\\Test\\": "tests/",
+            "Pages\\Test\\Fixture\\": "tests/Fixture/",
             "Cake\\Test\\": "vendor/cakephp/cakephp/tests/"
         }
     }
