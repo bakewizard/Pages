@@ -9,7 +9,7 @@ use Cake\TestSuite\TestCase;
 /**
  * Pages\Controller\Admin\PagesController Test Case
  *
- * @uses \Pages\Controller\Admin\PagesController
+ * @link \Pages\Controller\Admin\PagesController
  */
 class PagesControllerTest extends TestCase
 {
@@ -60,10 +60,10 @@ class PagesControllerTest extends TestCase
     }
 
     /**
-     * Test view method
+     * Test index method
      *
      * @return void
-     * @uses \Pages\Controller\Admin\PagesController::index()
+     * @link \Pages\Controller\Admin\PagesController::index()
      */
     public function testIndex(): void
     {
@@ -77,7 +77,7 @@ class PagesControllerTest extends TestCase
      * Test view method
      *
      * @return void
-     * @uses \Pages\Controller\Admin\PagesController::view()
+     * @link \Pages\Controller\Admin\PagesController::view()
      */
     public function testView(): void
     {
@@ -92,7 +92,7 @@ class PagesControllerTest extends TestCase
      * Test add method
      *
      * @return void
-     * @uses \Pages\Controller\Admin\PagesController::add()
+     * @link \Pages\Controller\Admin\PagesController::add()
      */
     public function testAddGet(): void
     {
@@ -104,7 +104,7 @@ class PagesControllerTest extends TestCase
      * Test add post method
      *
      * @return void
-     * @uses \Pages\Controller\Admin\PagesController::add()
+     * @link \Pages\Controller\Admin\PagesController::add()
      */
     public function testAddPost(): void
     {
@@ -125,7 +125,7 @@ class PagesControllerTest extends TestCase
      * Test edit method
      *
      * @return void
-     * @uses \Pages\Controller\Admin\PagesController::edit()
+     * @link \Pages\Controller\Admin\PagesController::edit()
      */
     public function testEditGet(): void
     {
@@ -137,7 +137,7 @@ class PagesControllerTest extends TestCase
      * Test edit post method
      *
      * @return void
-     * @uses \Pages\Controller\Admin\PagesController::edit()
+     * @link \Pages\Controller\Admin\PagesController::edit()
      */
     public function testEditPost(): void
     {
@@ -153,7 +153,7 @@ class PagesControllerTest extends TestCase
      * Test delete method
      *
      * @return void
-     * @uses \Pages\Controller\Admin\PagesController::delete()
+     * @link \Pages\Controller\Admin\PagesController::delete()
      */
     public function testDeletePost(): void
     {

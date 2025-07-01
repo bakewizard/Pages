@@ -9,7 +9,7 @@ use Cake\TestSuite\TestCase;
 /**
  * Pages\Controller\PagesController Test Case
  *
- * @uses \Pages\Controller\PagesController
+ * @link \Pages\Controller\PagesController
  */
 class PagesControllerTest extends TestCase
 {
@@ -19,6 +19,12 @@ class PagesControllerTest extends TestCase
         'plugin.Pages.Pages',
     ];
 
+    /**
+     * Test index method
+     *
+     * @return void
+     * @link \Pages\Controller\PagesController::index()
+     */
     public function testIndex(): void
     {
         $this->get('/pages');
@@ -27,6 +33,12 @@ class PagesControllerTest extends TestCase
         $this->assertResponseContains('Test page 2');
     }
 
+    /**
+     * Test the show method for a specific page.
+     *
+     * @return void
+     * @link \Pages\Controller\PagesController::show()
+     */
     public function testShowValidAlias(): void
     {
         $this->get('/pages/test-page-1');
@@ -34,6 +46,12 @@ class PagesControllerTest extends TestCase
         $this->assertResponseContains('Test title 1');
     }
 
+    /**
+     * Test the show method for a non-existent page.
+     *
+     * @return void
+     * @link \Pages\Controller\PagesController::show()
+     */
     public function testShowInvalidAlias(): void
     {
         $this->get('/pages/non-existent-alias');
