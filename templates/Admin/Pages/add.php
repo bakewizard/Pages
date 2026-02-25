@@ -4,7 +4,7 @@
  * @var \Pages\Model\Entity\Page $page
  */
 ?>
-<?= $this->Html->script(['/backend/plugins/tinymce/tinymce.min', 'Pages.backend/main'], ['block' => true]) ?>
+<?= $this->Html->script(['/backend/plugins/tinymce/tinymce.min', 'Pages.backend/main'], ['block' => true, 'type' => 'module']) ?>
 <div class="card card-success card-outline">
     <div class="card-header">
         <div class="card-title"><i class="fa-solid fa-edit me-2"></i><?= __('Add Page') ?></div>
