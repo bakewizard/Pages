@@ -6,11 +6,11 @@
 [![PHP Version](https://img.shields.io/badge/PHP-8.3%2B-blue)](https://php.net)
 [![GitHub release](https://img.shields.io/github/v/release/bakewizard/Pages?label=stable&sort=semver)](https://github.com/bakewizard/bakekit/releases)
 
-The `Pages` plugin provides basic static page management functionality for the [BakeKit CMS](https://github.com/bakewizard/BakeKit).
+The `Pages` plugin provides basic static page management functionality for the [BakeKit](https://github.com/bakewizard/BakeKit).
 
 ## Features
 
-- Create and manage static CMS pages
+- Create and manage static pages
 - Set slugs, SEO metadata, publish state
 - Rich text editor for page content (TinyMce)
 
