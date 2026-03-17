@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Pages\Controller;
 
+use App\Attribute\Link;
 use Cake\Http\Exception\NotFoundException;
 
 /**
@@ -14,13 +15,14 @@ use Cake\Http\Exception\NotFoundException;
 class PagesController extends AppController
 {
     /**
-     * Pages list
+     * Index method.
      *
-     * Displays a pages list
+     * Retrieves a paginated list of pages.
+     * The result set is limited to 10 records per page`.
      *
-     * @menu
      * @return \Cake\Http\Response|void
      */
+    #[Link(summary: 'Pages list', description: 'Displays a list of pages')]
     public function index()
     {
         $this->paginate = [
@@ -32,15 +34,16 @@ class PagesController extends AppController
     }
 
     /**
-     * Single page
+     * Show method.
      *
-     * Displays a single page
+     * Retrieves a single page by its alias.
+     * If the page cannot be found, a NotFoundException is thrown.
      *
-     * @menu Pages
      * @param string $alias The alias of the page to display
      * @return \Cake\Http\Response|void
-     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
+     * @throws \Cake\Datasource\Exception\RecordNotFoundException When the page is not found.
      */
+    #[Link(summary: 'Single page', description: 'Displays a single page', picker: 'Pages')]
     public function show(string $alias)
     {
         $page = $this->Pages->findByAlias($alias)->first();
