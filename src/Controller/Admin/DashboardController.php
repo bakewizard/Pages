@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Pages\Controller\Admin;
 
+use App\Attribute\Resource;
 use App\Controller\Admin\AppController;
 
 /**
@@ -19,6 +20,7 @@ class DashboardController extends AppController
      *
      * @return void
      */
+    #[Resource(label: 'Pages dashboard')]
     public function index()
     {
         // Plugin dashboard logic goes here
