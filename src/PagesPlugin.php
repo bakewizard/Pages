@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Pages;
 
-use App\Core\CmsPlugin;
+use App\Core\BasePlugin;
 use Cake\Routing\Route\DashedRoute;
 use Cake\Routing\RouteBuilder;
 use Override;
@@ -11,7 +11,7 @@ use Override;
 /**
  * Plugin for Pages
  */
-class PagesPlugin extends CmsPlugin
+class PagesPlugin extends BasePlugin
 {
     protected ?string $name = 'Pages';
     protected bool $consoleEnabled = false;
