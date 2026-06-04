@@ -5,6 +5,7 @@ namespace Pages\Controller\Admin;
 
 use App\Attribute\Resource;
 use App\Controller\Admin\AppController;
+use Cake\Event\EventInterface;
 
 /**
  * Pages Controller
@@ -17,6 +18,31 @@ use App\Controller\Admin\AppController;
  */
 class PagesController extends AppController
 {
+    /**
+     * @inheritDoc
+     */
+    public function beforeFilter(EventInterface $event)
+    {
+        parent::beforeFilter($event);
+
+        $controller = $this->request->getParam('controller');
+        $action = $this->request->getParam('action');
+
+        $this->addCrumb(
+            preg_replace('/([A-Z])/', ' ' . '$1', $controller),
+            [
+                'prefix' => 'Admin',
+                'plugin' => 'Pages',
+                'controller' => $controller,
+                'action' => 'index',
+            ],
+        );
+
+        if ($action !== 'index') {
+            $this->addCrumb($action);
+        }
+    }
+
     /**
      * Pages list
      *
