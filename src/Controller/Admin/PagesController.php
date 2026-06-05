@@ -28,7 +28,7 @@ class PagesController extends AppController
         $controller = $this->request->getParam('controller');
         $action = $this->request->getParam('action');
 
-        $this->addCrumb(
+        $this->addBreadcrumb(
             preg_replace('/([A-Z])/', ' ' . '$1', $controller),
             [
                 'prefix' => 'Admin',
@@ -39,7 +39,7 @@ class PagesController extends AppController
         );
 
         if ($action !== 'index') {
-            $this->addCrumb($action);
+            $this->addBreadcrumb($action);
         }
     }
 

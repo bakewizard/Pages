@@ -18,10 +18,10 @@ class AppController extends BaseController
     {
         $action = $this->request->getParam('action');
 
-        $this->addCrumb(__d('pages', 'Information'), ['plugin' => 'Pages', 'controller' => 'Pages', 'action' => 'index']);
+        $this->addBreadcrumb(__d('pages', 'Information'), ['plugin' => 'Pages', 'controller' => 'Pages', 'action' => 'index']);
 
         if ($action === 'show') {
-            $this->addCrumb($this->viewBuilder()->getVar('page')->name);
+            $this->addBreadcrumb($this->viewBuilder()->getVar('page')->name);
         }
 
         parent::beforeRender($event);
